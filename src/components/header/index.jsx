@@ -87,17 +87,18 @@ function Header() {
           <DrawerOverlay />
           <DrawerContent w="45%">
             <DrawerBody as="nav">
-              <NavLink>Sobre</NavLink>
-              <NavLink>Timeline</NavLink>
-              <NavLink>Parceiros</NavLink>
-              <NavLink>Inscrições</NavLink>
+              <NavLink onClick={() => { onClose(false); }}>Sobre</NavLink>
+              <NavLink onClick={onClose}>Timeline</NavLink>
+              <NavLink onClick={onClose}>Parceiros</NavLink>
+              <NavLink onClick={onClose}>Inscrições</NavLink>
+              <IconButton my="auto" mr={2} icon={<FaBars />} maxW={10} maxH={10} onClick={onClose} aria-label="Fechar Menu" />
             </DrawerBody>
           </DrawerContent>
         </Drawer>
       </Box>
 
       <Flex as="nav" display={{ base: 'none', lg: 'flex' }} mr="3%">
-        <NavLink>Sobre</NavLink>
+        <NavLink onClick={() => { onClose(false); }}>Sobre</NavLink>
         <NavLink>Timeline</NavLink>
         <NavLink>Parceiros</NavLink>
         <NavLink>Inscrições</NavLink>
